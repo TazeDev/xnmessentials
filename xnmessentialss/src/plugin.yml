@@ -1,0 +1,8 @@
+main: xnmessentialss.main.Main
+name: XNMEssentials
+version: 0.1
+description: Essential stuff that every Server needs
+author: TazeDev
+website: https://github.com/TazeDev
+commands:
+   Test1:
