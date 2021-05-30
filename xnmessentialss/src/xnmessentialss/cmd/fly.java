@@ -10,7 +10,7 @@ public class fly implements CommandExecutor {
 	   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		   if (sender instanceof Player) {
 	            Player p = (Player) sender;
-	            if(p.hasPermission("fly")) {
+	            if(p.hasPermission("xnme.fly")) {
 	            	if(args.length == 0) {
 	            		
 	            	
@@ -37,7 +37,7 @@ public class fly implements CommandExecutor {
 	            	}
 	            	}
 	            } else {
-	            	p.sendMessage("&cYou are not allowed to use this command!");
+	            	p.sendMessage("§cYou are missing the right permissions.");
 	            }
 		   }else{
 			   sender.sendMessage("You have to be a Player to do that!");
