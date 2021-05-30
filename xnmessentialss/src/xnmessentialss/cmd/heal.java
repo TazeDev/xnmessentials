@@ -13,16 +13,14 @@ public class heal implements CommandExecutor {
 	            Player p = (Player) sender;
 	            if(p.hasPermission("xnme.heal")) {
 	            	if(args.length == 0) {
-	            		
-	            	
 	            	p.setHealth(20);
-	            	p.setSaturation(20);
+	            	p.setFoodLevel(20);
 	            	p.sendMessage("§aYou were healed and your hunger was stilled.");
 	            	}else if(args.length == 1) {
 	            		Player t = Bukkit.getPlayer(args[0]);
 	            		if(t != null) {
 	            			t.setHealth(20);
-	    	            	t.setSaturation(20);
+	    	            	t.setFoodLevel(20);
 	    	            	t.sendMessage("§aYou were healed and your hunger was stilled.");
 	    	            	p.sendMessage("§aYou healed §7" + t.getName());
 	            		}

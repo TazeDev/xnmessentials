@@ -6,6 +6,6 @@ author: TazeDev
 website: https://github.com/TazeDev
 commands:
    fly:
-      description: §bPlaceholder
-         heal:
-      description: §bPlaceholder
+      description: &bPlaceholder
+   heal:
+      description: &bPlaceholder
