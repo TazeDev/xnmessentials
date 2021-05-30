@@ -7,8 +7,7 @@ import xnmessentialss.cmd.fly;
 public class Main extends JavaPlugin{
 	public void onEnable() {
 		System.out.println("XNMEssentials wurde erfolgreich geladen!");
-		
-		getCommand("fly").setExecutor(new fly());
+			getCommand("fly").setExecutor(new fly());
 		//TODO eventlogger
 		
 	}

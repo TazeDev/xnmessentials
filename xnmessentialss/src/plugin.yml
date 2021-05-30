@@ -5,4 +5,5 @@ description: Essential stuff that every Server needs
 author: TazeDev
 website: https://github.com/TazeDev
 commands:
-   Test1:
+   fly:
+      description: Test Commands
