@@ -1,6 +1,6 @@
 main: xnmessentialss.main.Main
 name: XNMEssentials
-version: 0.1
+version: 0.8
 description: Essential stuff that every Server needs
 author: TazeDev
 website: https://github.com/TazeDev
@@ -8,4 +8,6 @@ commands:
    fly:
       description: &bPlaceholder
    heal:
+      description: &bPlaceholder
+   vanish:
       description: &bPlaceholder

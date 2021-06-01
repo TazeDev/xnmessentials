@@ -10,37 +10,37 @@ public class fly implements CommandExecutor {
 	   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		   if (sender instanceof Player) {
 	            Player p = (Player) sender;
-	            if(p.hasPermission("xnme.fly")) {
+	            if(p.hasPermission("xnme.admin")) {
 	            	if(args.length == 0) {
 	            		
 	            	
 	            if(p.getAllowFlight() == true) {
 	            	p.setAllowFlight(false);
-	            	p.sendMessage("§cYou cannot fly anymore.");
+	            	p.sendMessage("§cDu kannst nicht mehr fliegen");
 	            } else {
 	            	p.setAllowFlight(true);
-	            	p.sendMessage("§aYou can fly now.");
+	            	p.sendMessage("§aDu kannst nun fliegen.");
 	            }
 	            	
 	            }else if(args.length == 1) {
 	            	Player t = Bukkit.getPlayer(args[0]);
 	            	if(t != null) {
-	            		   if(p.getAllowFlight() == true) {
+	            		   if(t.getAllowFlight() == true) {
 	       	            	t.setAllowFlight(false);
-	       	            	t.sendMessage("§cYou cannot fly anymore.");
-	       	            	p.sendMessage("§cThe player §7" + t.getName() + "§c can not fly.");
+	       	            	t.sendMessage("§cDu kannst nicht mehr fliegen.");
+	       	            	p.sendMessage("§cDer Spieler §7" + t.getName() + "§c kann nicht mehr fliegen.");
 	       	            } else {
 	       	            	t.setAllowFlight(true);
-	       	            	t.sendMessage("§aYou can fly n ow.");
-	       	            	p.sendMessage("§aThe player §7" + t.getName() + "§a can fly.");
+	       	            	t.sendMessage("§aDu kannst nun fliegen.");
+	       	            	p.sendMessage("§aDer Spieler §7" + t.getName() + "§a kann fliegen.");
 	       	            }
 	            	}
 	            	}
 	            } else {
-	            	p.sendMessage("§cYou are missing the right permissions.");
+	            	p.sendMessage("§cDu hast dazu keine Rechte.");
 	            }
 		   }else{
-			   sender.sendMessage("You have to be a Player to do that!");
+			   sender.sendMessage("Nein");
 		   }
 		   return false;
 	   }

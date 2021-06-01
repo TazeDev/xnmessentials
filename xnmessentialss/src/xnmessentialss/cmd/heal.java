@@ -11,24 +11,24 @@ public class heal implements CommandExecutor {
 		   
 		   if (sender instanceof Player) {
 	            Player p = (Player) sender;
-	            if(p.hasPermission("xnme.heal")) {
+	            if(p.hasPermission("xnme.admin")) {
 	            	if(args.length == 0) {
 	            	p.setHealth(20);
 	            	p.setFoodLevel(20);
-	            	p.sendMessage("§aYou were healed and your hunger was stilled.");
+	            	p.sendMessage("§aDu wurdest geheilt.");
 	            	}else if(args.length == 1) {
 	            		Player t = Bukkit.getPlayer(args[0]);
 	            		if(t != null) {
 	            			t.setHealth(20);
 	    	            	t.setFoodLevel(20);
-	    	            	t.sendMessage("§aYou were healed and your hunger was stilled.");
-	    	            	p.sendMessage("§aYou healed §7" + t.getName());
+	    	            	t.sendMessage("§aDu wurdest geheilt.");
+	    	            	p.sendMessage("§aDu hast §7" + t.getName() + " §ageheilt");
 	            		}
 	            	}
 	            }else
-	            	sender.sendMessage("§cYou are missing the right permissions.");
+	            	sender.sendMessage("§cDu hast dazu kein Recht.");
 		   }else
-			   sender.sendMessage("You have to be a Player to do that.");
+			   sender.sendMessage("Nein");
 		   return false;
 }
 }
