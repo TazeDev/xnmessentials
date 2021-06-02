@@ -6,8 +6,10 @@ author: TazeDev
 website: https://github.com/TazeDev
 commands:
    fly:
-      description: &bPlaceholder
+      description: &bGo wee
    heal:
-      description: &bPlaceholder
+      description: &bHeals the player
    vanish:
-      description: &bPlaceholder
+      description: &bVanishes the player
+   admin:
+      description: &cAdmin command

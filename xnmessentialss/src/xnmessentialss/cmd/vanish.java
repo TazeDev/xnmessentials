@@ -8,18 +8,10 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-import xnmessentialss.main.Main;
 
 public class vanish implements CommandExecutor {
 	
 	public ArrayList<Player> invisible_list = new ArrayList<Player>();
-	
-	
-	Main plugin;
-	
-	public vanish(Main plugin) {
-		this.plugin = plugin;
-	}
 	
 	   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		   
