@@ -8,6 +8,7 @@ import xnmessentialss.cmd.heal;
 import xnmessentialss.cmd.troll;
 import xnmessentialss.cmd.vanish;
 import xnmessentialss.cmd.vlist;
+import xnmessentialss.cmd.yt;
 import xnmessentialss.event.ClickEvents;
 import xnmessentialss.event.onJoin;
 import xnmessentialss.event.onLeave;
@@ -25,6 +26,7 @@ public class Main extends JavaPlugin{
 			getCommand("ad").setExecutor(new admin());
 			getCommand("vl").setExecutor(new vlist());
 			getCommand("troll").setExecutor(new troll());
+			getCommand("yt").setExecutor(new yt());
 			
 		//EVENT REGISTRATION
 			getServer().getPluginManager().registerEvents(new onJoin(), this);

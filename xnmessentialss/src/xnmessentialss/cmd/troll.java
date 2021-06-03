@@ -57,7 +57,8 @@ public class troll implements CommandExecutor {
 				 }else if (args.length == 1) {
 					  
 				  }
-			  }
+			  }else
+				  sender.sendMessage("Nein");
 		  
 		  
 		  return false;

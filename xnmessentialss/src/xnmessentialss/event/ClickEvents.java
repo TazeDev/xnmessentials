@@ -14,7 +14,7 @@ public class ClickEvents implements Listener {
 			
 			Player p = (Player) e.getWhoClicked();
 			
-			if(e.getClickedInventory().getTitle().equalsIgnoreCase("§2Test")) {
+			if(e.getClickedInventory().getTitle().equalsIgnoreCase("§2TROLL-MENU")) {
 			
 				
 				switch(e.getCurrentItem().getType()) {
@@ -31,6 +31,11 @@ public class ClickEvents implements Listener {
 				
 			e.setCancelled(true);
 			}
+			if(e.getClickedInventory().getTitle().equalsIgnoreCase("§5YouTube Ränge:")) {
+				e.setCancelled(true);
+				}
+				
+			}
 		}
 	
-}
+
