@@ -44,6 +44,7 @@ public class vanish implements CommandExecutor {
 							   }
 						   invisible_list.remove(t);
 						   t.sendMessage("§cDu bist nun sichtbar");
+						   t.setDisplayName(t.getName());
 						   p.sendMessage("§cDer Spieler §7" + t.getName() + " §cist nun sichtbar");
 					   }else if(!invisible_list.contains(t)) {
 						   for (Player alle : Bukkit.getOnlinePlayers()) {
@@ -51,6 +52,7 @@ public class vanish implements CommandExecutor {
 						   }
 						   invisible_list.add(t);
 						   t.sendMessage("§aDu bist unsichtbar");
+						   t.setDisplayName("§7Vanished " + t.getName());
 						   p.sendMessage("§aDer Spieler §7" + t.getName() + " §aist nun unsichtbar");
 					   }
 					   }

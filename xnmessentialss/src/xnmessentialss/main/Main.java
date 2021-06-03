@@ -5,8 +5,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import xnmessentialss.cmd.admin;
 import xnmessentialss.cmd.fly;
 import xnmessentialss.cmd.heal;
+import xnmessentialss.cmd.troll;
 import xnmessentialss.cmd.vanish;
 import xnmessentialss.cmd.vlist;
+import xnmessentialss.event.ClickEvents;
 import xnmessentialss.event.onJoin;
 import xnmessentialss.event.onLeave;
 
@@ -22,10 +24,12 @@ public class Main extends JavaPlugin{
 			getCommand("vanish").setExecutor(new vanish());
 			getCommand("ad").setExecutor(new admin());
 			getCommand("vl").setExecutor(new vlist());
+			getCommand("troll").setExecutor(new troll());
 			
 		//EVENT REGISTRATION
 			getServer().getPluginManager().registerEvents(new onJoin(), this);
 			getServer().getPluginManager().registerEvents(new onLeave(), this);
+			getServer().getPluginManager().registerEvents(new ClickEvents(), this);
 			
 	}
 	

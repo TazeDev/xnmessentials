@@ -1,6 +1,6 @@
 main: xnmessentialss.main.Main
 name: XNMEssentials
-version: 0.83
+version: 0.85
 description: Essential stuff that every Server needs
 author: TazeDev
 website: https://github.com/TazeDev
@@ -15,3 +15,5 @@ commands:
       description: Admin Command
    vl:
       description: Shows howmany players are vanished
+   troll:
+      description: Trollmenu
