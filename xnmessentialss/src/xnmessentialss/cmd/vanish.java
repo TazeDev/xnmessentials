@@ -24,12 +24,14 @@ public class vanish implements CommandExecutor {
 						   for (Player alle : Bukkit.getOnlinePlayers()) {
 								  alle.showPlayer(p);
 							   }
+						   p.setDisplayName(p.getName());
 						   invisible_list.remove(p);
 						   p.sendMessage("§cDu bist nun sichtbar");
 					   }else if(!invisible_list.contains(p)) {
 						   for (Player alle : Bukkit.getOnlinePlayers()) {
 							  alle.hidePlayer(p);
 						   }
+						   p.setDisplayName("§7Vanished " + p.getName());
 						   invisible_list.add(p);
 						   p.sendMessage("§aDu bist unsichtbar");
 					   }

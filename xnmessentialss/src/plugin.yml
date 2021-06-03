@@ -1,15 +1,17 @@
 main: xnmessentialss.main.Main
 name: XNMEssentials
-version: 0.821
+version: 0.83
 description: Essential stuff that every Server needs
 author: TazeDev
 website: https://github.com/TazeDev
 commands:
    fly:
-      description: wee
+      description: go wee
    heal:
-      description: the player
+      description: Heals the player
    vanish:
-      description: the player
+      description: Vanishes the player
    ad:
-      description: commanda
+      description: Admin Command
+   vl:
+      description: Shows howmany players are vanished

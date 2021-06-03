@@ -19,16 +19,16 @@ public class admin implements CommandExecutor{
 					p.setGameMode(GameMode.SURVIVAL);
 					  for (Player alle : Bukkit.getOnlinePlayers()) {
 						  alle.showPlayer(p);
-						  p.sendMessage("§cDu bist sichtbar");
 					   }
-
+					  p.sendMessage("§cDu bist sichtbar");
+					  
 				   }else if(!vanish.invisible_list.contains(p)) {
 					   vanish.invisible_list.add(p);
 						p.setGameMode(GameMode.CREATIVE);
 						  for (Player alle : Bukkit.getOnlinePlayers()) {
 							  alle.hidePlayer(p);
-							  p.sendMessage("§aDu bist unsichtbar");
 						   }
+						  p.sendMessage("§aDu bist unsichtbar");
 				   }
 			   }else
 				   p.sendMessage("§cDazu hast du keine Rechte.");
