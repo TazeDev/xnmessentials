@@ -1,6 +1,6 @@
 main: xnmessentialss.main.Main
 name: XNMEssentials
-version: 0.8
+version: 0.82
 description: Essential stuff that every Server needs
 author: TazeDev
 website: https://github.com/TazeDev
@@ -11,5 +11,5 @@ commands:
       description: &bHeals the player
    vanish:
       description: &bVanishes the player
-   admin:
+   ad:
       description: &cAdmin command

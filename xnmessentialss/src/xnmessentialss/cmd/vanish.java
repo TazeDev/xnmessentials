@@ -1,17 +1,18 @@
 package xnmessentialss.cmd;
 
-import java.util.ArrayList;
-
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class vanish implements CommandExecutor {
 	
-	public ArrayList<Player> invisible_list = new ArrayList<Player>();
+	public static List<Player> invisible_list = new ArrayList<>();
 	
 	   public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 		   

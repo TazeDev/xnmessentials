@@ -7,13 +7,14 @@ import xnmessentialss.cmd.fly;
 import xnmessentialss.cmd.heal;
 import xnmessentialss.cmd.vanish;
 import xnmessentialss.event.onJoin;
+import xnmessentialss.event.onLeave;
 
 public class Main extends JavaPlugin{
 	
 	public void onEnable() {
 		
-		
 		System.out.println("XNMEssentials wurde erfolgreich geladen!");
+		
 		//COMMAND REGISTRATION:
 			getCommand("fly").setExecutor(new fly());
 			getCommand("heal").setExecutor(new heal());
@@ -22,10 +23,17 @@ public class Main extends JavaPlugin{
 			
 		//EVENT REGISTRATION
 			getServer().getPluginManager().registerEvents(new onJoin(), this);
+			getServer().getPluginManager().registerEvents(new onLeave(), this);
 			
 	}
 	
 	public void onDisable() {
+		vanish.invisible_list.clear();
+		
+		
+		
+		
+		
 		System.out.println("XNMEssentials wurde erfolgreich entladen!");
 	}
 }
