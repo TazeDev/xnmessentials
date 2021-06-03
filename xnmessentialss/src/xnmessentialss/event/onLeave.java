@@ -1,5 +1,6 @@
 package xnmessentialss.event;
 
+import org.bukkit.Bukkit;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerQuitEvent;
 
@@ -10,5 +11,6 @@ public class onLeave implements Listener{
 		if(vanish.invisible_list.contains(e.getPlayer())) {
 			vanish.invisible_list.remove(e.getPlayer());
 		}
+		Bukkit.broadcastMessage("-" + e.getPlayer());
 	}
 }
