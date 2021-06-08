@@ -33,23 +33,25 @@ public class gamemode implements CommandExecutor{
 				}else if(args.length == 2) {
 					Player t = Bukkit.getPlayer(args[0]);
 					if(t != null) {
-						
-						p.sendMessage("§cDerzeit nicht verfügbar");
-					/*
+				
 						if(args[0].equalsIgnoreCase("0")){
 						t.setGameMode(GameMode.SURVIVAL);
 						t.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
+						p.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
 					}else if(args[0].equalsIgnoreCase("1")){
 						t.setGameMode(GameMode.CREATIVE);
 						t.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
+						p.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
 					}else if(args[0].equalsIgnoreCase("2")){
 						t.setGameMode(GameMode.ADVENTURE);
 						t.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
+						p.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
 					}else if(args[0].equalsIgnoreCase("3")){
 						t.setGameMode(GameMode.SPECTATOR);
 						t.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
+						p.sendMessage(ChatColor.GRAY + "Spielmodus geändert");
 						
-					} */
+					} 
 				}
 				}
 				

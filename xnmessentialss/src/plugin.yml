@@ -1,6 +1,6 @@
 main: xnmessentialss.main.Main
-name: xnmeSystem
-version: 0.87
+name: xnmeCore
+version: 1.2
 description: Essential stuff that every Server needs
 author: TazeDev
 website: https://github.com/TazeDev
@@ -25,3 +25,5 @@ commands:
       description: Plugin
    pl:
       description: Plugin
+  # warn:
+   #   description: a

@@ -13,6 +13,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+import net.md_5.bungee.api.ChatColor;
+
 public class yt implements CommandExecutor {
 	
 	List<Inventory> inv = new ArrayList<Inventory>(); 
@@ -35,6 +37,10 @@ public class yt implements CommandExecutor {
 			byt_meta.setLore(bytl);
 			byt.setItemMeta(byt_meta);
 			
+			ItemStack close = new ItemStack(Material.IRON_DOOR);
+			  ItemMeta closemeta = close.getItemMeta();
+			  closemeta.setDisplayName(ChatColor.RED + "Menu Schlieﬂen");
+			  close.setItemMeta(closemeta);
 			
 			ItemStack yt = new ItemStack(Material.FIREWORK);
 			ItemMeta yt_meta = yt.getItemMeta();
@@ -93,7 +99,7 @@ public class yt implements CommandExecutor {
 			youtube.setItem(19, pane);
 			youtube.setItem(20, pane);
 			youtube.setItem(21, pane);
-			youtube.setItem(22, magma);
+			youtube.setItem(22, close);
 			youtube.setItem(23, pane);
 			youtube.setItem(24, pane);
 			youtube.setItem(25, pane);

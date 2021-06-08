@@ -10,7 +10,7 @@ public class plugin implements CommandExecutor {
 		  if(sender instanceof Player) {
 			  Player p = (Player) sender;
 			 
-			  p.sendMessage("Plugins (1): §axnmeSystem");
+			  p.sendMessage("Plugins (1): §axnmeCore");
 		  }
 		  return false;
 	  }

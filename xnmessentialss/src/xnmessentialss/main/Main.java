@@ -1,8 +1,11 @@
 package xnmessentialss.main;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import xnmessentialss.cmd.admin;
+import xnmessentialss.cmd.adminitems;
 import xnmessentialss.cmd.fly;
 import xnmessentialss.cmd.gamemode;
 import xnmessentialss.cmd.heal;
@@ -10,6 +13,7 @@ import xnmessentialss.cmd.help;
 import xnmessentialss.cmd.plugin;
 import xnmessentialss.cmd.vanish;
 import xnmessentialss.cmd.vlist;
+import xnmessentialss.cmd.warn;
 import xnmessentialss.cmd.yt;
 import xnmessentialss.event.ClickEvents;
 import xnmessentialss.event.godmodee;
@@ -33,12 +37,14 @@ public class Main extends JavaPlugin{
 			getCommand("help").setExecutor(new help());
 			getCommand("plugin").setExecutor(new plugin());
 			getCommand("pl").setExecutor(new plugin());
+		//	getCommand("warn").setExecutor(new warn());
 			
 		//EVENT REGISTRATION
-			getServer().getPluginManager().registerEvents(new onJoin(), this);
-			getServer().getPluginManager().registerEvents(new onLeave(), this);
-			getServer().getPluginManager().registerEvents(new ClickEvents(), this);
-			getServer().getPluginManager().registerEvents(new godmodee(), this);
+			PluginManager pm = Bukkit.getPluginManager();
+			pm.registerEvents(new onJoin(), this);
+			pm.registerEvents(new onLeave(), this);
+			pm.registerEvents(new ClickEvents(), this);
+			pm.registerEvents(new godmodee(), this);
 			
 	}
 	

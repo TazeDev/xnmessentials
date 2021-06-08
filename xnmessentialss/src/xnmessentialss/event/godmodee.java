@@ -10,6 +10,7 @@ import org.bukkit.event.entity.EntityDamageEvent;
 public class godmodee implements Listener{
 	public static List<String> damage = new ArrayList<String>();
 	public void damage(EntityDamageEvent e) {
+		
 		Player p = (Player) e.getEntity();
 		if(damage.contains(p.getName())) {
 			e.setCancelled(true);
