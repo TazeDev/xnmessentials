@@ -27,11 +27,11 @@ public class admin implements CommandExecutor {
 			  Player p = (Player) sender;
 			  if(p.hasPermission("xnme.admin")) {
 				  if(args.length == 0) {
-					  Inventory invamode = Bukkit.createInventory(null, 9*3, "§4Admin-Dienst");
+					  Inventory invamode = Bukkit.createInventory(null, 9*3, "Â§4Admin-Dienst");
 					  
 					  ItemStack close = new ItemStack(Material.IRON_DOOR);
 					  ItemMeta closemeta = close.getItemMeta();
-					  closemeta.setDisplayName(ChatColor.RED + "Menu Schließen");
+					  closemeta.setDisplayName(ChatColor.RED + "Menu SchlieÃŸen");
 					  close.setItemMeta(closemeta);
 					  
 					  ItemStack gpane5 = new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7);
@@ -51,65 +51,35 @@ public class admin implements CommandExecutor {
 					  
 					  ItemStack reopen = new ItemStack(Material.GLOWSTONE_DUST);
 					  ItemMeta reopenmeta = reopen.getItemMeta();
-					  reopenmeta.setDisplayName(ChatColor.YELLOW + "Das Admin Menu öffnen");
+					  reopenmeta.setDisplayName(ChatColor.YELLOW + "Das Admin Menu Ã¶ffnen");
 					  reopen.setItemMeta(reopenmeta);
 					  
 					  if(ClickEvents.adminmode.contains(p)) {
-						  invamode.setItem(0, gpane5);
-						  invamode.setItem(1, gpane5);
-						  invamode.setItem(2, gpane5);
-						  invamode.setItem(3, gpane5);
-						  invamode.setItem(4, gpane5);
-						  invamode.setItem(5, gpane5);
-						  invamode.setItem(6, gpane5);
-						  invamode.setItem(7, gpane5);
-						  invamode.setItem(8, gpane5);
-						  invamode.setItem(9, gpane5);
-						  invamode.setItem(10, gpane5);
-						  invamode.setItem(11, gpane5);
-						  invamode.setItem(12, deactivate);
-						  invamode.setItem(13, gpane5);
-						  invamode.setItem(14, reopen);
-						  invamode.setItem(15, gpane5);
-						  invamode.setItem(16, gpane5);
-						  invamode.setItem(17, gpane5);
-						  invamode.setItem(18, gpane5);
-						  invamode.setItem(19, gpane5);
-						  invamode.setItem(20, gpane5);
-						  invamode.setItem(21, gpane5);
-						  invamode.setItem(22, gpane5);
-						  invamode.setItem(23, gpane5);
-						  invamode.setItem(24, gpane5);
-						  invamode.setItem(25, gpane5);
-						  invamode.setItem(26, close);
+						  for(int i = 0; i <= 26; i++){				// switch statement und for-loop implementiert
+							switch (i) {
+          						  case 12: invamode.setItem(i, deactivate);
+                 					  	   break;
+							  case 14: invamode.setItem(i, reopen);
+                 					  	   break;
+							  case 26: invamode.setItem(i, close);
+                 					  	   break;
+            						  default: invamode.setItem(i, gpane5);;
+                     						   break;
+        						}
+						  }
+						  
 					  }else if(!(ClickEvents.adminmode.contains(p))) {
-						  invamode.setItem(0, gpane5);
-						  invamode.setItem(1, gpane5);
-						  invamode.setItem(2, gpane5);
-						  invamode.setItem(3, gpane5);
-						  invamode.setItem(4, gpane5);
-						  invamode.setItem(5, gpane5);
-						  invamode.setItem(6, gpane5);
-						  invamode.setItem(7, gpane5);
-						  invamode.setItem(8, gpane5);
-						  invamode.setItem(9, gpane5);
-						  invamode.setItem(10, gpane5);
-						  invamode.setItem(11, gpane5);
-						  invamode.setItem(12, gpane5);
-						  invamode.setItem(13, activate);
-						  invamode.setItem(14, gpane5);
-						  invamode.setItem(15, gpane5);
-						  invamode.setItem(16, gpane5);
-						  invamode.setItem(17, gpane5);
-						  invamode.setItem(18, gpane5);
-						  invamode.setItem(19, gpane5);
-						  invamode.setItem(20, gpane5);
-						  invamode.setItem(21, gpane5);
-						  invamode.setItem(22, gpane5);
-						  invamode.setItem(23, gpane5);
-						  invamode.setItem(24, gpane5);
-						  invamode.setItem(25, gpane5);
-						  invamode.setItem(26, close);
+						  for(int i = 0; i <= 26; i++){				// switch statement und for-loop implementiert
+							switch (i) {
+          						  case 13: invamode.setItem(i, activate);
+                 					  	   break;
+							  case 26: invamode.setItem(i, close);
+                 					  	   break;
+            						  default: invamode.setItem(i, gpane5);;
+                     						   break;
+        						}
+						  }
+						 
 					  }
 					  
 					  
